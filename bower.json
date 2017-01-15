@@ -1,0 +1,30 @@
+{
+  "name": "portfolio",
+  "authors": [
+    "steffenpedersen"
+  ],
+  "description": "This is my portfolio.",
+  "main": "index.html",
+  "keywords": [
+    "portfolio"
+  ],
+  "license": "MIT",
+  "homepage": "steffenp.dk",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "normalize-strings": "normalize#^1.1.0",
+    "normalize-scss": "^3.0.3",
+    "bourbon": "^4.2.7",
+    "bower": "*",
+    "install": "^1.0.4",
+    "bootstrap-grid": "bootstrap-grid-scss#^1.0.1"
+  }
+}

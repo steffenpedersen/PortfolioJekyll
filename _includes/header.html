@@ -1,0 +1,41 @@
+<header id="header">
+
+  <div class="container">
+
+    <div class="header-menu menu-closed">
+      <div class="header-menu-container">
+        <div class="name">
+          <h3>
+            {{ site.data.settings.title }}
+          </h3>
+        </div>
+        <div class="profile">
+          <p>
+            {{ site.data.settings.profile | markdownify }}
+          </p>
+        </div>
+        <div class="social-links">
+          {% for link in site.data.settings.social %}
+          <a href="{{ link.link }}" class="icon-{{ link.icon }} fadeOpacity" target="_blank"></a>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <div class="menu-overlay"></div>
+
+    <div class="social-links">
+      <div class="js-toggleSidebar sidebar-open">
+        <div class="bar"></div>
+      </div>
+    </div>
+
+    <nav>
+        <a href="#intro" class="fadeOpacity top"></a>
+      {% for item in site.data.settings.menu %}
+        <a href="{{ item.url }}" class="fadeOpacity">{{ item.name }}</a>
+      {% endfor %}
+    </nav>
+
+  </div>
+
+</header>

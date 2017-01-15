@@ -1,0 +1,42 @@
+---
+---
+
+@import '1-tools/reset'
+
+// This is the single file output by sass. It is intended to ONLY @import other files.
+
+// 0 - BOWER
+@import '0-bower/bourbon/app/assets/stylesheets/bourbon'
+@import '0-bower/normalize-scss/normalize'
+@import '0-bower/bootstrap-grid/main'
+
+$avatar-path: '{{ site.data.layout.avatar }}'
+$projects: {% for project in site.data.settings.projects %} '{{ project }}', {% endfor %}
+
+// 1 - TOOLS
+@import '1-tools/font-awesome/scss/font-awesome'
+@import '1-tools/fonts'
+@import '1-tools/vars'
+@import '1-tools/spinner'
+
+
+// 2 - BASICS
+@import '2-basics/typography'
+@import '2-basics/body'
+@import '2-basics/loader'
+
+
+// 3 - MODULES
+@import '3-modules/example'
+
+
+// 4 - SECTIONS
+@import '4-sections/animation'
+@import '4-sections/header'
+@import '4-sections/intro'
+@import '4-sections/about'
+@import '4-sections/work'
+@import '4-sections/skills'
+@import '4-sections/404'
+@import '4-sections/contact'
+@import '4-sections/footer'

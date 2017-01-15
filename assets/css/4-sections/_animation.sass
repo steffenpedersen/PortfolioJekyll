@@ -1,0 +1,25 @@
+.fadeOpacity
+  opacity: 0
+
+.fadeOpacity.is-visible
+  animation: fadeOpacity 600ms ease-in forwards
+
+@keyframes fadeOpacity
+  0%
+    opacity: 0
+  100%
+    opacity: 1
+
+.come-in
+  transform: translateX(-150px)
+  animation: come-in 0.8s ease forwards
+
+@keyframes come-in
+  to
+    transform: translateX(0)
+
+@keyframes bounce
+  0%, 75%, 100%
+    transform: translateY(0px)
+  25%
+    transform: translateY(-30px)

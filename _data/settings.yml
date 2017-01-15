@@ -1,0 +1,53 @@
+#-------------------------------
+# General Site Settings
+
+title: Steffen
+description: Web <span>&</span> Design
+email: info@steffenp.dk
+
+menu:
+- {name: About, url: '#about'}
+- {name: Work, url: '#work'}
+- {name: Contact, url: '#contact'}
+
+seo:
+  description: 'Im a 26 year old web developer and designer who lives in Denmark. I study a Bachelor of Web Development at Business Academy Aarhus.'
+
+profile: >
+  Hi. I'm a 26 year old web developer and designer who lives in Denmark. I study a Bachelor of Web Development at Business Academy Aarhus.<br><br>If you want to say hello, please <span>[send](mailto:info@steffenp.dk?Subject=Hello){:target="_self"}</span> me an email!
+
+blurb: >
+  My approach to <span>[work](#work){:target="_self"}</span> is fun, personal, and always forward-looking. When I do not create wonders, I can be seen with my friends and family. Or with my old Gameboy.
+
+#-------------------------------
+# Experience Section
+
+
+#-------------------------------
+# Work Section
+
+projects:
+- {name: Happy Bear Prints, number: 1, folder: 'proj-1', file: 'work/proj-1.html', color: faca33}
+- {name: DLRT, number: 2, folder: 'proj-2', file: 'work/proj-2.html', color: f05544}
+- {name: Design, number: 3, folder: 'proj-3', file: 'work/proj-3.html', color: 93bb3d}
+- {name: Weblog, number: 4, folder: 'proj-4', file: 'work/proj-4.html', color: 12a2b7}
+- {name: Eat With Needs, number: 5, folder: 'proj-5', file: 'work/proj-5.html', color: f08f44}
+- {name: Umbraco, number: 6, folder: 'proj-6', file: 'work/proj-6.html', color: 8145ef}
+- {name: Illustrations, number: 7, folder: 'proj-7', file: 'work/proj-7.html', color: 48eded}
+- {name: Chat, number: 8, folder: 'proj-8', file: 'work/proj-8.html', color: D7D0C8}
+
+#-------------------------------
+# Contact Section
+
+social:
+- {icon: 'dribbble', link: 'http://dribbble.com/steffenpedersen'}
+- {icon: 'linkedin', link: 'http://linkedin.com/in/mrsteffenpedersen'}
+- {icon: 'instagram', link: 'http://instagram.com/mrsteffenpedersen/'}
+- {icon: 'etsy', link: 'http://etsy.com/shop/HappyBearPrints/'}
+- {icon: 'codepen', link: 'http://codepen.io/steffenpedersen/'}
+
+#-------------------------------
+# Footer Section
+
+footer: >
+  Want to get in touch? <span>[Drop me a line!](mailto:info@steffenp.dk?Subject=Hello){:target="_blank"}</span>

@@ -1,0 +1,160 @@
+header
+  position: fixed
+  z-index: 1
+  width: 100%
+  background-color: rgba(255, 255, 255, .8)
+  padding: 2rem 0
+
+  .social-links
+    float: left
+
+  nav
+    float: right
+    a
+      display: inline-block
+      margin-left: 1rem
+      color: $black
+      font:
+        family: $poppins
+        weight: 700
+      text:
+        transform: uppercase
+      +font-size(20)
+    .top::before
+      font-family: 'fontawesome'
+      content: $fa-var-arrow-up
+      color: $lightgrey
+
+.header-menu
+  position: fixed
+  color: $black
+  z-index: 3
+  top: 0
+  left: 0
+  bottom: 0
+  background-color: $white
+  height: 100vh
+  width: 100%
+  max-width: 380px
+  +transition-normal(.25s)
+  &.menu-closed
+    -ms-transform: translateX(-100%)
+    -webkit-transform: translateX(-100%)
+    transform: translateX(-100%)
+
+  .header-menu-container
+    padding: 0 3rem
+
+    .name
+      height: 15vh
+      line-height: 15vh
+      padding-top: 20vh
+      h3
+        display: inline-block
+        vertical-align: middle
+        line-height: normal
+
+    .profile
+      height: 40vh
+      line-height: 40vh
+      p
+        display: inline-block
+        vertical-align: middle
+        line-height: normal
+      span
+        @extend .play
+
+    .social-links
+      height: 25vh
+      a
+        line-height: 25vh
+
+.sidebar-open
+  position: relative
+  color: $black
+  cursor: pointer
+
+.menu-overlay
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+  background: rgba(0,0,0,0.9)
+  position: fixed
+  display: none
+  z-index: 2
+
+.menu-scroll
+  position: relative
+  display: block
+  width: 100%
+  height: 100%
+  overflow-x: hidden
+  overflow-y: scroll
+  padding: 20px 5% 70px
+  border-top: 1px solid $lightgrey
+
+$bar-width: 25px
+$bar-height: 4px
+$bar-spacing: 6.25px
+
+.js-toggleSidebar
+  width: $bar-width
+  height: $bar-height + $bar-spacing*2
+  cursor: pointer
+
+.bar,
+.bar:after,
+.bar:before
+  width: $bar-width
+  height: $bar-height
+
+.bar
+  position: relative
+  transform: translateY($bar-spacing)
+  background: $black
+  transition: all 0ms 300ms
+  &.animate
+    background: rgba(0, 0, 0, 0)
+
+  &:before
+    content: ""
+    position: absolute
+    left: 0
+    bottom: $bar-spacing
+    background: $black
+    transition: bottom 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+  &:after
+    content: ""
+    position: absolute
+    left: 0
+    top: $bar-spacing
+    background: $black
+    transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+.bar.animate
+  z-index: 999
+
+  &:after
+    top: 0
+    transform: rotate(45deg)
+    transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+  &:before
+    bottom: 0
+    transform: rotate(-45deg)
+    transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1)
+
+
+
+@media (max-width: 992px)
+  header
+    nav
+      a
+        margin-left: .5rem
+        +font-size(18)
+
+@media (max-width: 768px)
+  .header-menu
+    max-width: 100%

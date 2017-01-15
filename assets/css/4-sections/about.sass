@@ -1,0 +1,23 @@
+#about
+  padding: 3rem 0 3rem
+  .wrap
+    max-width: 600px
+    margin: 0 auto
+    text-align: center
+
+    .face-img
+      margin: 0 auto
+      border-radius: 50%
+      border: 10px solid rgba(229, 229, 229, .2)
+      background-size: cover
+      background-position: center
+      background-image: url(../img/#{$avatar-path})
+      +size(200px)
+
+    .blurb
+      margin-top: 2rem
+      text-align: center
+      span
+        @extend .play
+
+@media screen and (max-width: 650px)

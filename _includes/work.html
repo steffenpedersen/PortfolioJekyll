@@ -1,0 +1,44 @@
+<section id="work">
+
+  <div class="work-belt">
+
+    <div class="thumb-wrap">
+      <div class="thumb-container container">
+        <ul class="row">
+          {% for project in site.data.settings.projects %}
+          <li class="col-xs-12 col-md-6" for="{{ project.folder }}">
+            <div class="thumb-unit module" data-folder="{{ project.folder }}" data-color="{{ project.color }}">
+              <h4><span class="number">{{ project.number }} - </span><span class="title">{{ project.name }}</span></h4>
+            </div>
+          </li>
+      {% endfor %}
+        </ul>
+    </div>
+    </div>
+
+    <div class="work-wrap">
+      <div class="work-container container">
+        <div class="return-field">
+          <label for="return">
+            <div class="work-return left"></div>
+          </label>
+        </div>
+      <h2 class="project-title"><span class="number"></span><span class="title"></span></h2>
+      <div class="project-load"></div>
+
+      <noscript>
+        {% for project in site.data.settings.projects %}
+          <div class="noscript" id="content-{{ project.folder }}">
+            <h2 class="project-title">{{ project.name }}</h2>
+            <div class="noscript-load">
+              {% include {{project.file}} %}
+            </div>
+          </div>
+        {% endfor %}
+      </noscript>
+
+    </div>
+    </div>
+
+  </div>
+</section>

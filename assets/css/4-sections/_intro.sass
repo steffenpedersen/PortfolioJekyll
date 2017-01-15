@@ -1,0 +1,29 @@
+#intro
+  @extend .limiter
+  padding: 9rem 0 3rem
+
+  h1
+    text-align: center
+    margin: 0
+
+  .breakdance
+    width: 150px
+    height: 10px
+    background: $yellow
+    display: block
+    margin: 2rem auto
+
+  .intro
+    font:
+      family: $poppins
+      weight: 400
+    +font-size(20)
+    text-align: center
+    color: $black
+    span
+      @extend .play
+
+@media (max-width: 640px)
+  #intro
+    h1
+      +font-size(72)

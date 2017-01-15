@@ -1,0 +1,53 @@
+//
+// Variables
+//
+
+$black: #262626
+$grey: #303030
+$lightgrey: #e5e5e5
+$white: #ffffff
+
+$blue: #12a2b7
+$red: #f05544
+$green: #93bb3d
+$yellow: #faca33
+$orange: #f08f44
+$purple: #8145ef
+$mint: #48eded
+$lightbrown: #D7D0C8
+
+$poppins: 'Poppins', sans-serif
+$crimson: 'Crimson Text', serif
+$playfair: 'Playfair Display', serif
+
+//
+// Mixins
+//
+
+=font-size($sizeValue)
+  font-size: $sizeValue + px
+  font-size: ($sizeValue/16) + rem
+
+=transition-normal($seconds)
+  -o-transition: all $seconds ease-in-out
+  -webkit-transition: all $seconds ease-in-out
+  -moz-transition: all $seconds ease-in-out
+  transition: all $seconds ease-in-out
+
+
+//
+// Extend/Inheritance
+//
+
+.limiter
+  max-width: 1090px
+  margin-left: auto
+  margin-right: auto
+  padding: 0 40px
+
+.play
+  font:
+    family: $playfair
+    weight: 700
+    style: italic
+  +font-size(18)
